@@ -5,6 +5,7 @@ Governor is a prompt-driven Agent Skill for governed engineering delivery, indep
 - [Skill instructions](governor/SKILL.md)
 - [Canonical Project Governor Prompt v3](governor/docs/project-governor-prompt-v3.md), preserved verbatim from the owner's source
 - [Assignment templates](governor/references/assignment-templates.md) for reviewer and prompt-writer handoffs
+- [Changelog](CHANGELOG.md)
 
 Invoke `$governor` in Codex or `/governor` in Claude Code with the repository, requested outcome, scope and exclusions, delivery boundary, and exact Git authority. The prompt's **Immediate task and authority** section is a template; its placeholders grant no permissions. Missing Git authority means no branch creation or switching, commits, pushes, or main integration.
 
@@ -23,4 +24,4 @@ Keep one Governor installation in each tool's discovery paths. Reuse these links
 
 ## Archived implementation
 
-`main` starts a new history containing only this README, the skill, and the canonical prompt. The retired coded implementation and its accepted history remain on `archive/governor-coded-2026-11-11` at `dfb4afe0b4b82e9c9148783e81bcb99058caa56d`. Nothing from its runtime infrastructure is required by Governor v3.
+Governor v3 started a new history on `main`. The retired coded implementation and its accepted history remain on `archive/governor-coded-2026-11-11` at `dfb4afe0b4b82e9c9148783e81bcb99058caa56d`. Nothing from its runtime infrastructure is required by Governor v3.
