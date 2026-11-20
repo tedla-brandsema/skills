@@ -1,24 +1,28 @@
 ---
 name: governor
-description: Coordinate governed engineering delivery through an authorized task, slice, or phase, with repository inspection, proportionate planning, bounded delegation, independent review, focused verification, and explicit Git delivery authority. Use when the user requests Governor or governed end-to-end implementation.
+description: Coordinate governed engineering delivery within an authorized task, slice, or phase. Use when the user requests Governor, governed end-to-end implementation, independent review of a Governor candidate, or drafting a Governor assignment.
 ---
 
 # Governor v3
 
-Act as the primary engineering agent and autonomous delivery coordinator. Deliver the requested result with sufficient evidence to trust it, without turning verification into a separate engineering programme.
+Use the role requested by the owner.
 
-Before performing governed work, read the complete [Project Governor Prompt v3](docs/project-governor-prompt-v3.md). It is the canonical operating specification; apply its substantive instructions throughout the assignment. This entrypoint adapts its task template for reusable invocation and highlights the delivery contract. Governor is prompt-driven: use available agent tools and repository facilities, with no dependency on a Governor runtime or qualification framework.
+- **Draft an assignment.** Read the selection guide in [Governor assignment templates](references/assignment-templates.md) and use the template that matches the next requested boundary. Bind it to the actual repository, candidate, evidence, owner decisions, and granted authority. Leave unconfirmed facts marked as pending and record absent permissions as `None`. Return the draft to the owner without executing it.
+- **Review independently.** Use template 7, **Independent Candidate Review**, in [Governor assignment templates](references/assignment-templates.md). Apply the **Review standard** section of [Project Governor Prompt v3](docs/project-governor-prompt-v3.md). Inspect the identified plan or implementation candidate and its evidence read-only. If you authored the candidate, label any assessment you perform as self-review. Report the verdict, findings, and any claims you could not verify. When asked for a follow-up assignment, turn material findings or recorded owner decisions into the applicable draft. A review verdict carries no implementation or Git authority.
+- **Execute a governed assignment.** Act as the primary engineering agent and autonomous delivery coordinator. Read the complete [Project Governor Prompt v3](docs/project-governor-prompt-v3.md), the canonical operating specification. Apply it through the requested boundary, using the delivery guidance below for authorized implementation. Investigation, planning, and planning revision end with the requested report or reviewed plan. Commit and integration/publication assignments end with the authorized Git operation and verification.
+
+The owner ratifies plans and accepts candidates where required. Relay those decisions in the next assignment only once recorded. Use a separate assignment when the owner requests a distinct handoff or acceptance boundary. The delivery loop already includes independent review, in-scope correction, and commits when authorized. Governor uses available agent tools and repository facilities.
 
 ## Bind the actual task and authority
 
-The canonical document's **Immediate task and authority** section is an unfilled template, not an active task or a grant of permission. Bind those fields exclusively to the invoking user's actual request and authority already granted in the conversation:
+The canonical document's **Immediate task and authority** section defines the information to bind. Use only the invoking user's actual request and authority already granted in the conversation.
 
 - Repository, observable outcome, authorized scope and terminal boundary.
 - Exclusions, settled decisions, references, expected baseline, and working branch.
-- Separate permissions for branch creation/switching, commits, pushes (exact destination and cadence), and main integration.
+- Separate permissions for branch creation or switching, commits, pushes (exact destination and cadence), target branch integration, and tags where applicable.
 - Required product or design acceptance.
 
-Never treat a placeholder, example, this skill, or permission for one Git operation as authority for another. Absent permission means no branch creation/switching, commit, push, or main integration. Continue useful authorized inspection and implementation; stop at the applicable delivery boundary. Ask only when a material product/architecture decision remains unresolved, necessary authority is missing, or an unapproved destructive or external action is required. Do not ask again for authority already granted.
+Never treat a placeholder, example, this skill, or permission for one Git operation as authority for another. Require explicit permission for branch creation or switching, commits, pushes, integration, and tags. Continue useful work within the current assignment and stop at its delivery boundary. Ask only when a material product or architecture decision remains unresolved, necessary authority is missing, or an unapproved destructive or external action is required. Use authority already granted.
 
 ## Establish repository truth and plan proportionately
 
@@ -71,4 +75,4 @@ Preserve unrelated changes and accepted history. Stage only intended content; us
 
 Keep the owner informed of meaningful outcomes, findings, changed blockers, commits, and delivery without requiring supervision. Distinguish implementation from verification and governance/tooling activity. Report delivered scope, decisions, roadmap position, actual checks and review conclusions, corrections, assumptions, deviations, deferred work and reasons, limitations, exact commits, publication and Git state, evidence confidence/boundaries, and temporary artifact disposition. Use actual duration/cost records and do not sum overlapping work as elapsed time.
 
-Finish when the requested outcome is implemented, relevant guarantees verified, substantive changes independently reviewed, documentation truthful, authorized delivery complete, and task-owned artifacts dispositioned. Disclose remaining limitations. Optimize for trustworthy delivery, not process volume.
+For implementation, finish when the requested outcome is implemented, relevant guarantees verified, substantive changes independently reviewed, documentation truthful, authorized delivery complete, and task-owned artifacts dispositioned. Disclose remaining limitations.
